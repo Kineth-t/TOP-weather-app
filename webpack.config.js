@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // Entry point for the application
@@ -26,6 +27,13 @@ module.exports = {
         test: /\.js$/,  // Regex to match .js files
         exclude: /node_modules/,  // Exclude node_modules directory
         use: 'babel-loader',  // Transpile JS with Babel (for ES6+ support)
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Handle image files
+        type: "asset/resource",
+        generator: {
+          filename: 'images/[name][hash][ext]',
+        },
       },
     ],
   },
