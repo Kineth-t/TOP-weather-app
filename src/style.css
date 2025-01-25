@@ -1,0 +1,51 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1920,20,1.414,2,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--4: clamp(0.3127rem, 0.5885rem + -0.2298vw, 0.5425rem);
+    --step--3: clamp(0.4421rem, 0.6928rem + -0.2089vw, 0.651rem);
+    --step--2: clamp(0.6252rem, 0.8125rem + -0.1561vw, 0.7813rem);
+    --step--1: clamp(0.884rem, 0.9482rem + -0.0535vw, 0.9375rem);
+    --step-0: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2665rem + 0.4175vw, 1.7675rem);
+    --step-2: clamp(1.62rem, 1.4442rem + 0.8792vw, 2.4992rem);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #6E7F8D;
+}
+
+body{
+    background-color: #F4F9FC;
+}
+
+.navBar{
+    background-color: #57A7E5;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--step-2);
+}
+
+/* .logo{
+    justify-self: flex-start;
+} */
+
+.searchBar{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    flex-grow: 1;
+}
